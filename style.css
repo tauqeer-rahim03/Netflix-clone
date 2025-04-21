@@ -5,41 +5,117 @@
 }
 
 body {
-    font-family: "Outfit", sans-serif;
-    height: 200000px;
+    font-family: "Montserrat", sans-serif;
     background-color: black;
 }
 
-.background {
+/* Background image with blur effect */
+
+body::before {
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    right: 0;
+    bottom: 0;
+    min-height: 200vh;
+    background-image: url("images/background-image.webp");
+    background-position: cover;
+    background-color: black;
+    background-repeat: repeat-y; /* Repeat only horizontally */
+    background-size: 100% 50%; /* Two images fit side by side */
+    background-attachment: scroll;
+    filter: blur(40px);
+    z-index: -10;
+    background-color: rgba(54, 0, 0, 0.5); /* adjust 0.5 as needed */
+    background-blend-mode: darken;
+}
+
+/* Head section */
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
-.background-image {
-    filter: blur(20px);
-    z-index: -10;
-    position: absolute;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
     top: 0;
     left: 0;
+    padding: 20px 40px;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.7889) 8.333%,
+        rgba(0, 0, 0, 0.7556) 16.67%,
+        rgba(0, 0, 0, 0.7) 25%,
+        rgba(0, 0, 0, 0.6222) 33.33%,
+        rgba(0, 0, 0, 0.5222) 41.67%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.2778) 58.33%,
+        rgba(0, 0, 0, 0.1778) 66.67%,
+        rgba(0, 0, 0, 0.1) 75%,
+        rgba(0, 0, 0, 0.04444) 83.33%,
+        rgba(0, 0, 0, 0.01111) 91.67%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 2;
     width: 100%;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -9;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1;
-    width: 180px;
+    width: 158px;
+    margin-left: 2px;
+}
+
+.sign-in {
+    background-color: white;
+    color: black;
+    padding: 8px 14px;
+    border-radius: 100px;
+    border: none;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.sign-in:hover {
+    background-color: rgb(182, 182, 182);
+}
+
+.navigator {
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 80px;
+    border-radius: 30px;
+    width: 446px;
+    padding: 13px 20px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    white-space: nowrap;
+}
+
+.navigator li {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navigator li a {
+    font-size: small;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.774);
+    font-weight: 500;
 }

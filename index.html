@@ -8,28 +8,32 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="background">
-            <div class="overlay"></div>
-            <img
-                src="images/background-image.webp"
-                alt="netflix background image"
-                class="background-image"
-            />
-        </div>
         <head>
-            <nav class="header">
-                <img
-                    src="images/netflix-logo.png"
-                    alt="Netflix Logo"
-                    class="logo"
-                />
-            </nav>
+            <div class="header-container">
+                <div class="header">
+                    <a href="index.html"
+                        ><img
+                            src="images/netflix-logo.png"
+                            alt="Netflix Logo"
+                            class="logo"
+                    /></a>
+                    <button class="sign-in">Sign In</button>
+                </div>
+                <nav class="navigator">
+                    <ul class="nav-list">
+                        <li><a href="">Popular Now</a></li>
+                        <li><a href="">Plans</a></li>
+                        <li><a href="">Reasons to Join</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
         </head>
     </body>
     <script src="script.js"></script>
