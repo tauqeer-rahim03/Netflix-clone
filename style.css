@@ -11,37 +11,34 @@ body {
 
 /* Background image with blur effect */
 
-body::before {
-    content: "";
+.background-blur {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    height: 100%;
+    width: 100%;
     min-height: 200vh;
     background-image: url("images/background-image.webp");
-    background-position: cover;
-    background-color: black;
-    background-repeat: repeat-y; /* Repeat only horizontally */
-    background-size: 100% 50%; /* Two images fit side by side */
+    background-position: center;
     background-attachment: scroll;
-    filter: blur(40px);
-    z-index: -10;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
     background-color: rgba(54, 0, 0, 0.5); /* adjust 0.5 as needed */
     background-blend-mode: darken;
+    filter: blur(30px);
 }
 
 /* Head section */
 
-.header-container {
+header {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 
-.header {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,8 +62,8 @@ body::before {
         rgba(0, 0, 0, 0.01111) 91.67%,
         rgba(0, 0, 0, 0) 100%
     );
-    z-index: 2;
     width: 100%;
+    z-index: 10;
 }
 
 .logo {
@@ -93,7 +90,6 @@ body::before {
 }
 
 .navigator {
-    z-index: 2;
     background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
     top: 80px;
@@ -101,6 +97,8 @@ body::before {
     width: 446px;
     padding: 13px 20px;
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    backdrop-filter: blur(8px);
 }
 
 .nav-list {
@@ -119,4 +117,30 @@ body::before {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.774);
     font-weight: 500;
+}
+
+.main-content {
+    position: relative;
+    z-index: 1; /* Keep it above background */
+    padding: 2rem;
+    color: white;
+    overflow: hidden;
+}
+
+.main-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    min-height: 200vh;
+    background-image: url("images/background-image.webp");
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(54, 0, 0, 0.5); /* adjust 0.5 as needed */
+    background-blend-mode: darken;
+    z-index: -1;
 }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                position: relative;
+                min-height: 100vh;
+                background-color: black;
+                overflow-x: hidden;
+                height: 200vh;
+            }
+
+            /* Blurred background using pseudo-element */
+            body::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url("images/background-image.webp");
+                background-size: cover;
+                background-position: center;
+                background-attachment: scroll;
+                filter: blur(8px);
+                z-index: -1;
+            }
+
+            /* Main container with clear background */
+            .main-container {
+                position: relative;
+                width: 80%;
+                max-width: 800px;
+                margin: 50px auto;
+                padding: 30px;
+                overflow: hidden;
+                z-index: 1;
+                /* Optional styling */
+                border-radius: 10px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            }
+
+            /* Unblurred background for main container */
+            .main-container::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url("images/background-image.webp"); /* Same image as body::before */
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed; /* Important to align with body background */
+                z-index: -1;
+            }
+
+            /* Optional: Container for your content */
+            .content {
+                position: relative;
+                z-index: 1;
+                /* Optional: add background color if text needs more contrast */
+                /* background-color: rgba(255, 255, 255, 0.7); */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                similique nulla, iure veritatis esse cumque explicabo, magni
+                voluptatem odit accusantium facere eos libero. Fuga optio ad
+                ratione quae. Ipsam, omnis. Lorem ipsum, dolor sit amet
+                consectetur adipisicing elit. Vitae optio doloremque nihil
+                numquam culpa assumenda quibusdam nesciunt cumque cupiditate
+                mollitia aperiam, in temporibus, cum possimus laboriosam
+                reiciendis saepe ad exercitationem!Lorem
+            </div>
+        </div>
+    </body>
+</html>
