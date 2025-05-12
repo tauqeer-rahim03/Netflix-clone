@@ -4,12 +4,17 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: myFont;
+    src: url("font/NetflixSans-Regular.otf");
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Lato", sans-serif;
+    font-family: myFont;
     background-color: black;
     padding: 0 40px;
 }
@@ -234,14 +239,15 @@ header {
 
 /* Plans Section */
 
-.plans {
+.sub-section {
     color: rgb(204, 204, 204);
     margin-top: 80px;
     padding: 0 160px;
 }
 
-.plans h2 {
+.sub-section h2 {
     font-size: 32px;
+    margin-bottom: 20px;
     font-weight: 800;
 }
 
@@ -249,7 +255,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
     justify-content: space-between;
     align-items: stretch;
     gap: 16px;
@@ -319,4 +324,41 @@ header {
 .plans-container h4,
 .plans-container ul {
     margin-bottom: 12px;
+}
+
+/* Reasons to join section */
+
+.reasons-to-join-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 16px;
+}
+
+.reasons-to-join-container div {
+    padding: 40px 26px;
+    border-radius: 16px;
+    width: 25%;
+    height: 326px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, rgb(34, 38, 77), rgb(48, 5, 48));
+}
+
+.reasons-to-join-container div h3 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: white;
+}
+
+.reasons-to-join-container div p {
+    font-weight: 600;
+}
+
+.side-icon {
+    position: absolute;
+    bottom: 16px;
+    right: 8px;
+    width: 100px;
 }
