@@ -11,6 +11,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
@@ -57,7 +58,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 20px 40px;
+    padding: 1.25rem 2.5rem;
     background: linear-gradient(
         180deg,
         rgba(0, 0, 0, 0.8) 0%,
@@ -79,21 +80,21 @@ header {
 }
 
 .logo {
-    width: 158px;
-    margin-left: 2px;
+    width: 10rem;
+    margin-left: 0.125rem;
 }
 
 .sign-in {
     background-color: white;
     color: black;
-    padding: 8px 14px;
+    padding: 0.5rem 1rem;
     border-radius: 100px;
     border: none;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 600;
     transition: background-color 0.3s ease-in-out;
-    margin-right: 10px;
+    margin-right: 0.625rem;
     cursor: pointer;
 }
 
@@ -104,10 +105,10 @@ header {
 .navigator {
     background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
-    top: 80px;
+    top: 5rem;
     border-radius: 30px;
-    width: 446px;
-    padding: 13px 20px;
+    width: 27rem;
+    padding: 0.875rem 1.25rem;
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5);
     z-index: 10;
     backdrop-filter: blur(8px);
@@ -139,16 +140,17 @@ header {
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 0px 30px rgb(0, 0, 0);
-    margin-top: 140px;
-    padding: 0 80px 88px 80px;
+    margin-top: 8.75rem;
+    padding: 0 5rem 5.5rem 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0.1) 20%,
-        rgba(0, 0, 0, 0.548) 40%,
-        rgba(0, 0, 0, 0.37) 80%,
+        rgba(0, 0, 0, 0.6) 40%,
+        rgba(0, 0, 0, 0.7) 60%,
+        rgba(0, 0, 0, 0.6) 80%,
         rgba(255, 255, 255, 0.1) 100%
     );
 }
@@ -156,7 +158,7 @@ header {
 .main-content-background::after {
     content: "";
     position: absolute;
-    top: -140px;
+    top: -8.75rem;
     left: 0;
     height: 100%;
     width: 100%;
@@ -172,19 +174,20 @@ header {
 }
 
 .main-content {
-    max-width: 645px;
+    max-width: 40.375rem;
     margin-top: 270px;
+    font-size: 1rem;
 }
 
 .main-content h1 {
-    font-size: 66px;
-    font-weight: 800;
+    font-size: 4.125em;
+    font-weight: 1000;
     margin-bottom: 18px;
     text-align: center;
 }
 
 .main-content .first-para {
-    font-size: 25px;
+    font-size: 1.5em;
     font-weight: 600;
     line-height: 1.5;
     text-align: center;
@@ -200,9 +203,9 @@ header {
 
 .email-input-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 8px;
 }
 
 .email-input-container input {
@@ -212,7 +215,7 @@ header {
     padding: 20px 20px;
     border-radius: 100px;
     border: none;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 600;
 }
 
@@ -226,7 +229,7 @@ header {
     padding: 16px 40px;
     border-radius: 100px;
     border: none;
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
@@ -454,4 +457,131 @@ header {
 
 .footer-copy {
     font-size: 13px;
+}
+
+@media (max-width: 1279px) {
+    .header-container {
+        padding: 20px 60px;
+    }
+
+    .main-content {
+        font-size: 0.75em;
+        max-width: 500px;
+    }
+
+    .email-input-container input {
+        font-size: 1em;
+        padding: 16px 16px;
+    }
+
+    .email-input-container button {
+        font-size: 1.25em;
+        padding: 12px 28px;
+    }
+
+    .sub-section {
+        padding: 0 40px;
+    }
+
+    .plans-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .plans-container a {
+        width: 100%;
+        padding: 24px;
+    }
+
+    .reasons-to-join-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .reasons-to-join-container div {
+        width: 100%;
+        height: 220px;
+    }
+}
+
+@media (max-width: 960px) {
+    .header-container {
+        padding: 20px 20px;
+    }
+
+    .main-content {
+        margin-top: 200px;
+        font-size: 0.6em;
+        max-width: 100%;
+    }
+
+    .second-para {
+        font-weight: 400;
+        font-size: 1.5em;
+    }
+
+    .email-input-container {
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .email-input-container input {
+        font-size: 2em;
+        padding: 16px;
+        border-radius: 4px;
+        font-weight: 500;
+    }
+
+    .email-input-container button {
+        font-size: 2em;
+        padding: 16px;
+        border-radius: 4px;
+        font-weight: 500;
+    }
+
+    .sub-section {
+        padding: 0 20px;
+    }
+
+    .plans-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .reasons-to-join-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-container {
+        padding: 20px 10px;
+    }
+
+    .main-content {
+        margin-top: 200px;
+        font-size: 0.5em;
+        max-width: 100%;
+    }
+
+    .second-para {
+        font-size: 1.5em;
+        font-weight: 300;
+    }
+
+    .email-input-container {
+        flex-direction: column;
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .email-input-container button {
+        max-width: max-content;
+        margin: auto;
+    }
 }
