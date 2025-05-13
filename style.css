@@ -408,3 +408,50 @@ header {
     font-size: 24px;
     font-weight: 400;
 }
+
+/* Footer section */
+
+.footer {
+    color: #757575;
+    padding: 40px 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-title {
+    margin-bottom: 30px;
+}
+
+.footer-title a {
+    color: #757575;
+    text-decoration: underline;
+}
+
+.footer-links ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+}
+
+.footer-links ul li {
+    margin-bottom: 16px;
+}
+
+.footer-links ul li a {
+    color: #757575;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    font-size: 13px;
+}
