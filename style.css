@@ -35,7 +35,7 @@ body {
             rgba(0, 0, 0, 0.89)
         ),
         url("images/background-image.webp");
-    background-size: cover;
+    background-size: center;
     background-repeat: no-repeat;
     background-position: top center;
     background-attachment: scroll;
@@ -141,7 +141,7 @@ header {
     border-radius: 20px;
     box-shadow: 0 0px 30px rgb(0, 0, 0);
     margin-top: 8.75rem;
-    padding: 0 5rem 5.5rem 5rem;
+    padding: 15rem 5rem 5.5rem 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -167,15 +167,15 @@ header {
     background-position: center;
     background-attachment: scroll;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: center;
     background-color: rgba(54, 0, 0, 0.5);
     background-blend-mode: darken;
     z-index: -1;
+    margin-top: -270px;
 }
 
 .main-content {
     max-width: 40.375rem;
-    margin-top: 270px;
     font-size: 1rem;
 }
 
@@ -186,7 +186,7 @@ header {
     text-align: center;
 }
 
-.main-content .first-para {
+.first-para {
     font-size: 1.5em;
     font-weight: 600;
     line-height: 1.5;
@@ -194,7 +194,7 @@ header {
     margin-bottom: 30px;
 }
 
-.main-content .second-para {
+.second-para {
     font-weight: 600;
     line-height: 1.5;
     text-align: center;
@@ -375,7 +375,7 @@ header {
 }
 
 .faq-question,
-.faq-answer {
+.faq-answer-inner {
     font-size: 24px;
     font-weight: 400;
     color: white;
@@ -410,6 +410,14 @@ header {
     background-color: #353535;
     font-size: 24px;
     font-weight: 400;
+}
+
+.plus-icon {
+    transition: transform 0.3s ease;
+}
+
+.plus-icon.rotate {
+    transform: rotate(45deg);
 }
 
 /* Footer section */
@@ -583,5 +591,75 @@ header {
     .email-input-container button {
         max-width: max-content;
         margin: auto;
+    }
+}
+
+@media (max-width: 460px) {
+    * {
+        font-size: 1em;
+    }
+    body {
+        padding: 0;
+    }
+
+    .header-container {
+        padding: 20px 5px;
+    }
+
+    .main-content-background {
+        padding: 5rem 2rem 5rem 2rem;
+        width: 100%;
+        border-radius: 16px;
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-content {
+        font-size: 0.4em;
+        max-width: 100%;
+        margin-top: 100px;
+    }
+
+    .first-para {
+        font-size: 1rem;
+    }
+
+    .second-para {
+        font-size: 1rem;
+        font-weight: 200;
+    }
+
+    .email-input-container input {
+        font-size: 1.5em;
+        padding: 12px;
+        border-radius: 4px;
+        font-weight: 500;
+    }
+
+    .email-input-container button {
+        font-size: 1.5em;
+        padding: 12px;
+        border-radius: 4px;
+        font-weight: 500;
+    }
+
+    .faq-question,
+    .faq-answer-inner {
+        font-size: 20px;
+    }
+
+    .plus-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .plus-icon svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .sub-section {
+        margin-top: 60px;
     }
 }
