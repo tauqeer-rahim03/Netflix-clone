@@ -20,9 +20,10 @@ A responsive clone of the Netflix landing page built using HTML, CSS, and JavaSc
 [Click here to view](https://netflix-clone-three-liard-18.vercel.app/)
 ⚠️ Note: If your browser warns about a “dangerous site,” it's likely a false flag due to hosting or domain reputation. Your code is safe if no harmful scripts are used.
 
-✍️ Author
+## ✍️ Author
 
 Tauqeer Rahim
 
-📄 License
+## 📄 License
+
 This project is for educational/demo purposes only and is not intended for commercial use. All Netflix branding, logos, and assets belong to Netflix, Inc.
